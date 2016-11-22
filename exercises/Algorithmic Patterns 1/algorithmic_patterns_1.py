@@ -17,3 +17,5 @@ def pattern(axiom, rules, num):
 
 print (pattern("b", {"a": "ab", "b": "a"}, 5))
 # abaababa
+
+
