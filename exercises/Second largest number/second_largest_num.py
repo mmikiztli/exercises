@@ -11,3 +11,5 @@ def second():
             o.writelines(max(x for x in num if x != maximum))
 
 second()
+
+

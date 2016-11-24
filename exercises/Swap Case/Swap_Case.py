@@ -13,3 +13,5 @@ def swap(word):
     return "".join(swap_word)
 
 print (swap(word))
+
+
