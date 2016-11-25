@@ -3,17 +3,12 @@ from turtle import *
 
 
 def pattern(axiom, rules, num):
-    result = [axiom]
-    x = 0
-    while x < int(num):
-        for ch in axiom:
-            for key, value in rules.items():
-                if ch == key:
-                    result.append(value)
-        x += 1
-    return "".join(result)
+    result = axiom
+    for i in range(int(num)):
+        result = "".join(rules[ch] if ch in rules else ch for ch in result)
+    return result
 
-res = pattern("F++F++F", {"F": "F−F++F−F", "-": "-", "+": "+"}, 10)
+res = pattern("F++F++F", {"F": "F−F++F−F"}, 1)
 
 print (res)
 
